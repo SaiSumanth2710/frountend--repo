@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'dev', url: '<frontend-repo-url>'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'vercel deploy --prod'
+            }
+        }
+    }
+}
