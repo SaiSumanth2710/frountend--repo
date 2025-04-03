@@ -11,7 +11,7 @@ public class LMSFrontend extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("LMS - Login");
-        
+
         // Login UI Components
         Label userLabel = new Label("Username:");
         TextField userTextField = new TextField();
